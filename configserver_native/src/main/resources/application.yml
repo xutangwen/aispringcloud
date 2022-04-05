@@ -1,0 +1,12 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: configserver_native
+  profiles:
+    active: native  # 指定读取本地配置
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
